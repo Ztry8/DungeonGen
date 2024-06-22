@@ -11,6 +11,9 @@ The project has only one file, so you can build it with a single command:
 Before running the generation, you need to provide the program with three arguments:   
 the width, the height, and the percentage of floor tiles in relation to all tiles. 
 
+75x50 size, 55% of the floor tiles compared to all tiles.   
+![screenshot](https://github.com/Ztry8/DungeonGen/blob/main/screenshots/55per.PNG)
+
 75x50 size, 45% of the floor tiles compared to all tiles.   
 ![screenshot](https://github.com/Ztry8/DungeonGen/blob/main/screenshots/45per.PNG)
 
