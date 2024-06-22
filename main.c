@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdlib.h>
 
-signed main(int argc, char **arg) {
+signed main(void) {
 	int width, height;
 	float floor_percent;
 
