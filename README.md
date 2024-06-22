@@ -5,7 +5,7 @@
 
 #### Building
 The project has only one file, so you can build it with a single command:   
-```clang -std=c99 -Wall -pedantic main.c -o generator.exe```
+```clang -std=c99 -Wall -Wextra -pedantic main.c -o generator.exe```
 
 #### Input data
 Before running the generation, you need to provide the program with three arguments:   
