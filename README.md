@@ -7,6 +7,6 @@ The project has only one file, so you can build it with a single command:
 ```clang -std=c99 -Wall -pedantic main.c -o generator.exe```
 
 #### TODO
-##### Replace stack with the heap.
-##### Add ```<; >; $; *;``` tiles.
-##### Add corridors and rooms.
+- [ ] Replace stack with the heap.
+- [ ] Add ```<; >; $; *;``` tiles.
+- [ ] Add corridors and rooms.
