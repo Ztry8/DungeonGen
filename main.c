@@ -2,8 +2,8 @@
 #include <time.h>
 #include <stdlib.h>
 
-#define WIDTH 100
-#define HEIGHT 75
+#define WIDTH 150
+#define HEIGHT 100
 #define FLOOR_PERCENT 45
 
 signed main(int argc, char **arg) {
