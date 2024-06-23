@@ -23,6 +23,6 @@ the width, the height, and the percentage of floor tiles in relation to all tile
 #### TODO
 - [x] Fix the bug with generating a map outside the border.
 - [x] Added the input for the width, height and percentage of floor tiles in relation to all tiles. 
-- [ ] Replace stack with the heap.
+- [x] Replace stack with the heap.
 - [ ] Add ```<; >; $; *;``` tiles.
 - [ ] Add corridors and rooms.
