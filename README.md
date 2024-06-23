@@ -19,8 +19,9 @@ For example:
 ![screenshot](https://github.com/Ztry8/DungeonGen/blob/main/screenshots/25per.PNG)
 
 #### TODO
-- [x] Fix the bug with generating a map outside the border.
+- [x] Fixed the bug with generating a map outside the boundary.
 - [x] Added the input for the width, height and percentage of floor tiles in relation to all tiles. 
-- [x] Replace stack with the heap.
-- [x] Add corridors and rooms.
+- [x] Replaced stack with the heap.
+- [x] Added corridors and rooms.
+- [ ] Create larger rooms.
 - [ ] Add ```<; >; $; *;``` tiles.
