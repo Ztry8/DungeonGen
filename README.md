@@ -1,5 +1,5 @@
 # DungeonGen
-## Dungeon generator for roguelikes made with just 35 lines of code!
+## Dungeon generator for roguelikes created with less than 35 lines of code!
 ### This code is written in pure C99. Use the stdio to display a map.
 ![screenshot](https://github.com/Ztry8/DungeonGen/blob/main/screenshots/1.PNG)
 
