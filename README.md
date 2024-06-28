@@ -7,6 +7,15 @@
 The project has only one file, so you can build it with a single command:   
 ```clang -std=c99 -Wall -Wextra -pedantic main.c -o generator```
 
+#### Time
+The time to generate a map with a scale of 200 (600x400 tiles) is: 
+```
+real	0m0.767s
+user	0m0.022s
+sys	0m0.006s
+```
+If the program was built by the command in the previous section.
+
 #### Designation
 `<` - exit   
 `E` - enemy   
@@ -15,6 +24,7 @@ The project has only one file, so you can build it with a single command:
 
 #### Input data
 Before running the generation, you need to provide the program `scale` argument.   
+Scale = 1 => 4x3 size.
 For example:
 
 Scale = 10   
