@@ -4,21 +4,21 @@
 #define int long 
 
 signed main(void) {
-	int width, height; float floor_percent;
-	puts("Enter the width, height, and percentage of floor tiles to all tiles:");
-	scanf("%ld%ld%f", &width, &height, &floor_percent);
-	srand((unsigned)time(NULL)); int* map = malloc((width * height) * sizeof(int));
-	if (map == NULL) return 1;
+	int scale; puts("Enter the scale:"); scanf("%ld", &scale); 
+	int width = 3 * scale, height = 2 * scale; srand((unsigned)time(NULL)); 
+	int* map = malloc((width * height) * sizeof(int)); if (map == NULL) return 1;
 
 	for (int i = 0; i < height * width; i++) map[i] = '#';
 	int px = rand() % width, py = rand() % height, floor_tiles = 0, tunnel_length = 0, tunnel_dir = 0;
-	while ((int)(floor_percent / 100.f * (width * height)) >= floor_tiles) {
+	while ((width * height)/3 >= floor_tiles) {
 		switch (tunnel_length ? tunnel_dir : rand() % 5) {
 		case 0: px + 1 >= width ? px-- : px++; break;
 		case 1: px - 1 <= 0 ? px++ : px--; break;
 		case 2: py + 1 >= height ? py-- : py++; break;
 		case 3: py - 1 <= 0 ? py++ : py--; break;
-		case 4: tunnel_dir = rand() % 4; tunnel_length = rand()%(width/100); break;
+		case 4: tunnel_dir = rand() % 4; 
+			tunnel_length = rand()%((tunnel_dir <= 1 ? width : height) / 5); 
+			break;
 		}
 
 		if (tunnel_length) tunnel_length--;
