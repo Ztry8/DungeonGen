@@ -11,10 +11,10 @@ The project has only one file, so you can build it with a single command:
 Before running the generation, you need to provide the program `scale` argument.   
 For example:
 
-Scale = 10
+Scale = 10   
 ![screenshot](https://github.com/Ztry8/DungeonGen/blob/main/screenshots/10s.png)
 
-Scale = 25 
+Scale = 25   
 ![screenshot](https://github.com/Ztry8/DungeonGen/blob/main/screenshots/25s.png)
 
 #### TODO
