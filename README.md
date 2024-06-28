@@ -8,9 +8,9 @@ The project has only one file, so you can build it with a single command:
 ```clang -std=c99 -Wall -Wextra -pedantic main.c -o generator```
 
 #### Designation
-`<` - exit
-`E` - enemy
-`$` - money
+`<` - exit   
+`E` - enemy   
+`$` - money   
 `*` - chest
 
 #### Input data
