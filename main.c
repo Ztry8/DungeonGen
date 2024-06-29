@@ -5,6 +5,7 @@
 
 signed main(void) {
 	int scale; puts("Enter the scale:"); scanf("%ld", &scale); 
+	if (scale < 3) puts("Scale must be more than 3!"), return 1;
 	int width = 3 * scale, height = 2 * scale; srand((unsigned)time(NULL)); 
 	int* map = malloc((width * height) * sizeof(int)); if (map == NULL) return 1;
 
