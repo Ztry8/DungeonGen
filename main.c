@@ -20,15 +20,16 @@ signed main(void) {
 		case 4: tunnel_dir = rand() % 4; tunnel_length = rand()%((tunnel_dir <= 1 ? width : height) / 5); break;
 		}
 
+		int index = py * width + px;
 		if (tunnel_length) tunnel_length--;
-		if (map[py * width + px] == '#') {
-			if (rand()%25) map[py * width + px] = '.';
-			else if (rand()%3) map[py * width + px] = 'E';
-			else map[py * width + px] = (rand() % 2 ? '*' : '$');
+		if (map[index] == '#') {
+			if (rand()%25) map[index] = '.';
+			else if (!rand()%5 && tunnel_length) map[index] = '+';
+			else if (rand()%3) map[index] = 'E';
+			else map[index] = (rand() % 2 ? '*' : '$');
 			floor_tiles++;
 		}
 	}; 
-
 	for (int y = 0; y < height; y++) { for (int x = 0; x < width; x++) putchar(map[y * width + x]); putchar('\n'); };
 	free(map); return 0;
 }

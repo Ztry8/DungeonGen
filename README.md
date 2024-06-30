@@ -21,6 +21,7 @@ If the program was built by the command in the previous section.
 `E` - enemy   
 `$` - money   
 `*` - chest
+`+` - door
 
 #### Input data
 Before running the generation, you need to provide the program `scale` argument.   
@@ -38,4 +39,4 @@ Scale = 25
 - [x] Added the input for scale. 
 - [x] Replaced stack with the heap.
 - [x] Added corridors and rooms.
-- [x] Add ```<; E; $; *;``` tiles.
+- [x] Add ```<; E; $; *; +;``` tiles.
