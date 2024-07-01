@@ -31,5 +31,5 @@ If the program was built by the command in the `Building` section.
 - [x] Added the input for scale. 
 - [x] Replaced stack with the heap.
 - [x] Added corridors and rooms.
-- [ ] Added ```<; E; $; *;``` tiles.
+- [ ] Add ```<; E; $; *;``` tiles.
 - [ ] Optimize for large areas.
