@@ -23,12 +23,7 @@ Scale = 25 or 100x75 size:
 ![screenshot](https://github.com/Ztry8/DungeonGen/blob/main/screenshots/25s.png)
 
 ### Time
-The time to generate a map with a scale of 200 (600x400 tiles) is: 
-```
-real	0m0.767s
-user	0m0.022s
-sys	0m0.006s
-```
+The time to generate a map with a scale of 100 (300x200 tiles) is 0.026 seconds.
 If the program was built by the command in the `Building` section.
 
 ### TODO
@@ -36,5 +31,5 @@ If the program was built by the command in the `Building` section.
 - [x] Added the input for scale. 
 - [x] Replaced stack with the heap.
 - [x] Added corridors and rooms.
-- [x] Added ```<; E; $; *;``` tiles.
-- [x] Optimizate for large areas.
+- [ ] Added ```<; E; $; *;``` tiles.
+- [ ] Optimize for large areas.

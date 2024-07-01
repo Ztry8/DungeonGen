@@ -6,7 +6,7 @@
 int min(int a, int b) { return a > b ? b : a; }
 
 signed main(void) {
-	int scale; puts("Enter the scale:"); scanf("%ld", &scale); 
+	 int scale = 100; puts("Enter the scale:"); scanf("%ld", &scale); 
 	if (scale < 10) { 
 		puts("Scale must be more than 10!"); 
 		return 1; 
@@ -15,7 +15,7 @@ signed main(void) {
 	int width = 3 * scale, height = 2 * scale; srand((unsigned)time(NULL)); 
 	int* map = malloc((width * height) * sizeof(int)); if (map == NULL) return 1;
 	for (int i = 0; i < height * width; i++) map[i] = '#';
-	int px = rand() % width, py = rand() % height, floor_tiles = width * height/3, tunnel_length = 0, tunnel_dir = 0; 
+	int px = rand() % width, py = rand() % height, floor_tiles = (width * height)/1.5f, tunnel_length = 0, tunnel_dir = 0; 
 	map[py * width + px] = '<';
 
 	while (floor_tiles--) {
