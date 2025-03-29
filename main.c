@@ -1,58 +1,53 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
-#define int long 
+#include <string.h>
 
-int min(int a, int b) { return a > b ? b : a; }
+const int SIZE = 30;
 
 signed main(void) {
-	int scale; puts("Enter the scale:"); scanf("%ld", &scale); 
-	if (scale < 10) { 
-		puts("Scale must be more than 10!"); 
-		return 1; 
-	}
-
-	int width = 3 * scale, height = 2 * scale; srand((unsigned)time(NULL)); 
-	unsigned char* map = calloc(width * height, sizeof(unsigned char)); if (map == NULL) return 1;
-	memset(map, '#', width * height * sizeof(unsigned char));
-	int px = rand() % width, py = rand() % height, floor_tiles = (width * height)/4, tunnel_length = 0, tunnel_dir = 0; 
-	map[py * width + px] = '<';
-
+	srand((unsigned)time(NULL)); unsigned char* map = calloc(SIZE * SIZE, sizeof(unsigned char)); 
+        if (map == NULL) return 1; memset(map, '#', SIZE * SIZE * sizeof(unsigned char));
+	int px = rand() % SIZE, py = rand() % SIZE, floor_tiles = (SIZE * SIZE)/3, tunnel_length = 0, tunnel_dir = 0; 
+        
 	while (floor_tiles) {
-		switch (tunnel_length ? tunnel_dir : rand() % 5) {
-		case 0: px + 1 == width-1 ? px-- : px++; break;
+		switch (tunnel_length ? tunnel_dir : rand() % 8) {
+		case 0: px + 1 == SIZE-1 ? px-- : px++; break;
 		case 1: px - 1 == 0 ? px++ : px--; break;
-		case 2: py + 1 == height-1 ? py-- : py++; break;
+		case 2: py + 1 == SIZE-1 ? py-- : py++; break;
 		case 3: py - 1 == 0 ? py++ : py--; break;
-		case 4: tunnel_dir = rand() % 4; tunnel_length = rand()%((tunnel_dir <= 1 ? width : height) / 5); break; 
+		default: tunnel_dir = rand() % 4; tunnel_length = rand()%(SIZE / 5); break; 
 		}	
-		if (tunnel_length) tunnel_length--;
-		else floor_tiles--;
-		if (map[py * width + px] == '#') map[py * width + px] = '.';
+  
+	      if (map[py * SIZE + px] == '#') map[py * SIZE + px] = '.';
+	      if (tunnel_length) tunnel_length--;
+	      else floor_tiles--;
 	};
-
-	for (int i = 0; i < scale; i++) {
-		int index = (rand()%(int)(height)) * width + (rand()%(int)(width*0.9f));
-		if (map[index] == '.') {
-			map[index] = 'Z';
-			if (i < scale/10) map[index] = '!';
+        
+        char last = 'Z';
+	for (int i = 0; i < SIZE;) {
+		int index = rand()%(SIZE * SIZE);
+		if (map[index] == '.') { 
+		    map[index] = i < SIZE/2 && last != '!' ? '!' : 'Z'; 
+		    last = map[index];
+		    i++; 
 		}
-		else i--;
 	}
+	
+	map[py * SIZE + px] = '<';
 	
 	// Output map
 	FILE *img = fopen("map.pbm", "wb");
 
 	if (img == NULL) {
-		for (int y = 0; y < height; y++) { 
-			for (int x = 0; x < width; x++) putchar(map[y * width + x]); 
+		for (int y = 0; y < SIZE; y++) { 
+			for (int x = 0; x < SIZE; x++) putchar(map[y * SIZE + x]); 
 			putchar('\n'); 
 		}
 		puts("The error occurs when opening/creating the \'map.pbm\' file, the map will be displayed in the console!");
-	}
-	else {
-		fprintf(img, "P3\n%d %d\n255\n", width, height);
-		for (int i = 0; i < width * height; i++) {
+	} else {
+		fprintf(img, "P3\n%d %d\n255\n", SIZE, SIZE);
+		for (int i = 0; i < SIZE * SIZE; i++) {
 			switch (map[i]) {
 			case '#': fputs("127 127 127 ", img); break;
 			case '.': fputs("0 0 0 ", img); break;
