@@ -1,0 +1,14 @@
+[package]
+name = "dungeon_gen"
+version = "0.1.0"
+authors = ["Ztry8 (AslanD)"] 
+edition = "2024"
+description = "Fast and simple level generator for roguelikes written in pure Rust"
+readme = "../README.md"
+repository = "https://github.com/Ztry8/DungeonGen/"
+license = "BSD-3-Clause"
+license-file = "../LICENSE"
+keywords = ["generator", "roguelike", "dungeon"]
+
+[dependencies]
+quad-rand = "0.2.3"
