@@ -31,11 +31,6 @@ The project has only one file, so you can build it with a single command:
 ```clang -std=c99 -Wall -Wextra -pedantic main.c -o generator```
 
 
-### Results
-![screenshot](https://github.com/Ztry8/DungeonGen/blob/main/screenshots/20s.png)
-![screenshot](https://github.com/Ztry8/DungeonGen/blob/main/screenshots/21.png)
-
-
 ### Time
 The time to generate a map with a scale of 100 (300x200 tiles) is range from 0.002 to 0.003 seconds.
 If the program was built by the command in the `Building` section.
@@ -49,3 +44,10 @@ If the program was built by the command in the `Building` section.
 - [x] Added ```<; E; *;``` tiles.
 - [x] Added image support
 - [ ] Add Rust version
+
+
+### Results
+![screenshot](https://github.com/Ztry8/DungeonGen/blob/main/screenshots/5.png)
+![screenshot](https://github.com/Ztry8/DungeonGen/blob/main/screenshots/4.png)
+![screenshot](https://github.com/Ztry8/DungeonGen/blob/main/screenshots/1.png)
+![screenshot](https://github.com/Ztry8/DungeonGen/blob/main/screenshots/3.png)
