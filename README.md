@@ -1,5 +1,5 @@
 # DungeonGen
-## Fast and simple level generator for roguelikes written in pure C99! 
+## Fast and simple level generator for roguelikes written in pure C99/Rust! 
 ![screenshot](https://github.com/Ztry8/DungeonGen/blob/main/screenshots/12.png)
 
 ### About generator
@@ -28,7 +28,7 @@ Could be a cave with mining tunnels!
 
 ### Building
 The project has only one file, so you can build it with a single command:   
-```clang -std=c99 -Wall -Wextra -pedantic main.c -o generator```
+```clang -std=c99 -Wall -Wextra -pedantic main.c -o generator``` (For Rust: ```cargo run```)
 
 
 ### Time
@@ -43,7 +43,7 @@ If the program was built by the command in the `Building` section.
 - [x] Added corridors and rooms.
 - [x] Added ```<; E; *;``` tiles.
 - [x] Added image support
-- [ ] Add Rust version
+- [x] Add Rust version
 
 
 ### Results
