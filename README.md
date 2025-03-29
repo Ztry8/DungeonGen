@@ -1,5 +1,5 @@
 # DungeonGen
-## Dungeon generator for roguelikes written in pure C99! 
+## Fast and simple level generator for roguelikes written in pure C99! 
 ![screenshot](https://github.com/Ztry8/DungeonGen/blob/main/screenshots/12.png)
 
 ### About generator
@@ -31,19 +31,13 @@ The project has only one file, so you can build it with a single command:
 ```clang -std=c99 -Wall -Wextra -pedantic main.c -o generator```
 
 
-### Input data
-Before running the generation, you need to provide the program `scale` argument.   
-For example:
-
-Scale = 20 or 60x40 size: (text mode)
+### Results
 ![screenshot](https://github.com/Ztry8/DungeonGen/blob/main/screenshots/20s.png)
-
-Scale = 35 or 105x70 size: (image mode)
 ![screenshot](https://github.com/Ztry8/DungeonGen/blob/main/screenshots/21.png)
 
 
 ### Time
-The time to generate a map with a scale of 100 (300x200 tiles) is range from 0.008 to 0.011 seconds.
+The time to generate a map with a scale of 100 (300x200 tiles) is range from 0.002 to 0.003 seconds.
 If the program was built by the command in the `Building` section.
 
 
@@ -54,3 +48,4 @@ If the program was built by the command in the `Building` section.
 - [x] Added corridors and rooms.
 - [x] Added ```<; E; *;``` tiles.
 - [x] Added image support
+- [ ] Add Rust version
